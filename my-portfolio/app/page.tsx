@@ -57,11 +57,18 @@ type Project = {
 
 const projects: Project[] = [
   {
+  title: "AWS IAM Security Hardening for a Startup",
+  description:
+    "Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies, account-wide MFA enforcement, a strong password policy, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins. Includes architecture diagrams for a two-VPC dev/prod setup with an ALB-fronted private subnet.",
+  stack: ["IAM", "CloudTrail", "CloudWatch", "SNS", "VPC"],
+  link: "https://github.com/fatemehfeizipour/Projects/tree/main/IAM",
+},
+  {
     title: "Cloud-Native Portfolio Site",
     description:
       "Built and deployed this portfolio itself as a cloud project - a Next.js site hosted on AWS Amplify with a fully automated GitHub CI/CD pipeline (Provision → Build → Deploy → Verify), provisioned entirely through AWS CDK.",
     stack: ["Next.js", "Amplify", "AWS CDK", "CI/CD"],
-    link: "https://github.com/fatemehfeizipour/Projects/blob/main/Nextjs-portfolio-amplify-project/README.md",
+    link: "https://github.com/fatemehfeizipour/nextjs-portfolio-amplify",
   },
   {
     title: "AWS Cost & Resource Auditor",
