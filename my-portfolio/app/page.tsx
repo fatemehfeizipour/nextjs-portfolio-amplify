@@ -61,7 +61,7 @@ const projects: Project[] = [
   description:
     "Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies, account-wide MFA enforcement, a strong password policy, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins. Includes architecture diagrams for a two-VPC dev/prod setup with an ALB-fronted private subnet.",
   stack: ["IAM", "CloudTrail", "CloudWatch", "SNS", "VPC"],
-  link: "https://github.com/fatemehfeizipour/Projects/tree/main/IAM",
+  link: "https://github.com/fatemehfeizipour/aws-iam-security-hardening",
 },
   {
     title: "Cloud-Native Portfolio Site",
