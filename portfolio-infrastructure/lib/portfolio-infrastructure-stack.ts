@@ -21,7 +21,7 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
       //Connect to my github repo
       sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
         owner: "fatemehfeizipour",
-        repository: 'Projects',
+        repository: 'nextjs-portfolio-amplify',
         oauthToken: cdk.SecretValue.secretsManager ('github-token')
       }),
 
