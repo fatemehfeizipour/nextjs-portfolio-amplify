@@ -33,7 +33,7 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
             preBuild: {
               commands: [
                 'echo "starting this build"',
-                'cd Nextjs-portfolio-amplify/my-portfolio',
+                'cd nextjs-portfolio-amplify/my-portfolio',
                 'npm install'
               ],
             },
