@@ -25,7 +25,7 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
         oauthToken: cdk.SecretValue.secretsManager ('github-token')
       }),
 
-      //Build Specification
+      //Build  Specification
       buildSpec: codebuild.BuildSpec.fromObjectToYaml({
         version: '1.0',
         frontend: {
