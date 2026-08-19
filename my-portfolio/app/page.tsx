@@ -59,8 +59,8 @@ const projects: Project[] = [
   {
   title: "AWS IAM Security Hardening for a Startup",
   description:
-    "Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies, account-wide MFA enforcement, a strong password policy, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins. Includes architecture diagrams for a two-VPC dev/prod setup with an ALB-fronted private subnet.",
-  stack: ["IAM", "CloudTrail", "CloudWatch", "SNS", "VPC"],
+   "Designed and implemented least-privilege IAM access controls for a fictional 10-person startup - five IAM groups with custom and managed policies, account-wide MFA enforcement, a strong password policy, and a fully secured root user with a verified CloudTrail → CloudWatch → SNS alerting pipeline on root logins. Rebuilt the same structure three more times with Terraform, CloudFormation, and CDK, deployed live and compared side by side - including a real IAM policy naming bug caught in Terraform and proactively fixed before it hit the other two tools.",
+  stack: ["IAM", "Terraform", "CloudFormation", "AWS CDK", "CloudTrail", "CloudWatch"],
   link: "https://github.com/fatemehfeizipour/aws-iam-security-hardening",
 },
   
