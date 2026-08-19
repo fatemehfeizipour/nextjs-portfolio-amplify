@@ -63,7 +63,16 @@ const projects: Project[] = [
   stack: ["IAM", "CloudTrail", "CloudWatch", "SNS", "VPC"],
   link: "https://github.com/fatemehfeizipour/aws-iam-security-hardening",
 },
-  {
+  
+{
+  title: "TechHealth Patient Portal - AWS CDK Migration",
+  description:
+    "Migrated a healthcare company's manually-built AWS environment - patient portal on EC2 and RDS, five years of undocumented console changes - into secure, version-controlled Infrastructure as Code. Split across 4 CDK stacks (networking, security groups, compute, database), with security-group-to-security-group access rules instead of IP ranges, SSM Session Manager in place of SSH, RDS Multi-AZ for synchronized failover, and encryption at rest. Deployed and tested end-to-end on real AWS infrastructure, including catching and fixing an Availability Zone placement bug during deployment.",
+  stack: ["AWS CDK", "TypeScript", "VPC", "EC2", "RDS", "IAM", "AWS Systems Manager"],
+  link: "https://github.com/fatemehfeizipour/techhealth-migration-cdk",
+},
+
+{
     title: "Cloud-Native Portfolio Site",
     description:
       "Built and deployed this portfolio itself as a cloud project - a Next.js site hosted on AWS Amplify with a fully automated GitHub CI/CD pipeline (Provision → Build → Deploy → Verify), provisioned entirely through AWS CDK.",
