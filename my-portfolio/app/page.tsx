@@ -10,7 +10,7 @@ const profile = {
   location: "Vancouver, BC",
   tagline: "AWS Certified Cloud Practitioner building automated, secure cloud infrastructure.",
   intro:
-    "I'm an AWS Certified Cloud Practitioner with hands-on experience building CI/CD pipelines and defining infrastructure as code with AWS CDK, Terraform, and CloudFormation. I have practical depth in AWS networking and security - VPC design, subnet segmentation, security group chaining, and least-privilege access patterns - and I use generative AI tools to speed up troubleshooting, documentation, and automation. With a strong background in client-facing work and technical documentation, I'm seeking opportunities in cloud support, cloud operations, or junior cloud engineering.",
+    "I'm an AWS Certified Cloud Practitioner with hands-on experience building CI/CD pipelines and defining infrastructure as code with AWS CDK, Terraform, and CloudFormation. I have practical depth in AWS networking and security - VPC design, subnet segmentation, security group chaining, and least-privilege access patterns - and I use generative AI tools to speed up troubleshooting, documentation, and automation. With a strong background in client-facing work and technical documentation, I'm seeking opportunities in cloud support, cloud operations, or cloud engineering.",
   email: "fatemehfeizipur@gmail.com",
   
   github: "https://github.com/fatemehfeizipour",
@@ -112,7 +112,7 @@ type Experience = {
 
 const experience: Experience[] = [
   {
-    role: "Junior Cloud Engineer",
+    role: "Cloud Engineer",
     company: "Cloud Engineer Academy",
     period: "Jan 2026 - Present",
     description:
