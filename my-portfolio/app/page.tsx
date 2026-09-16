@@ -37,6 +37,7 @@ const skills = [
   "CloudFormation",
   "AWS Systems Manager",
   "AWS CLI",
+  "Docker",
   "TypeScript",
   "Python",
   "boto3",
@@ -86,69 +87,19 @@ const projects: Project[] = [
     stack: ["Next.js", "Amplify", "AWS CDK", "CI/CD"],
     link: "https://github.com/fatemehfeizipour/nextjs-portfolio-amplify",
   },
-  {
+{
     title: "AWS Cost & Resource Auditor",
     description:
-      "Read-only CLI tool that scans an AWS account for common sources of wasted spend - unattached EBS volumes, idle EC2 instances (via CloudWatch CPU metrics), S3 buckets missing lifecycle policies, and unused Elastic IPs. Built with Python and boto3, with paginated API calls and fail-safe error handling per check.",
-    stack: ["Python", "boto3", "CloudWatch", "EC2", "S3"],
+      "Read-only CLI tool that scans an AWS account for common sources of wasted spend - unattached EBS volumes, idle EC2 instances (via CloudWatch CPU metrics), S3 buckets missing lifecycle policies, and unused Elastic IPs. Built with Python and boto3, with paginated API calls and fail-safe error handling per check. Containerized with Docker - build caching ordered to skip dependency reinstalls on code-only changes, and AWS credentials passed via a runtime volume mount rather than baked into the image. Published to Docker Hub.",
+    stack: ["Python", "boto3", "CloudWatch", "EC2", "S3", "Docker"],
     link: "https://github.com/fatemehfeizipour/aws-cost-auditor",
   },
-  {
-    title: "Secure VPC Redesign for an Invoicing App",
+{
+    title: "Linux Fleet Automation with AWS Systems Manager",
     description:
-      "Redesigned the network architecture for an invoicing application handling bank details for ~8,000 users - moved from a fully public setup to a defense-in-depth VPC with public/private/isolated subnet tiers, security group chaining, AWS Systems Manager Session Manager in place of SSH, and invoice files moved to S3 behind a VPC Gateway Endpoint.",
-    stack: ["VPC", "Security Groups", "AWS Systems Manager", "S3"],
-    link: "https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudsecurity-terraform-activity-7484165129354506240--UOa?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU"
-  },
-  {
-    title: "Highly Available Multi-AZ VPC",
-    description:
-      "Designed and deployed a highly available AWS VPC as code with Terraform, spanning two Availability Zones with public and private subnets, NAT Gateways, an Internet Gateway, and full route table configuration.",
-    stack: ["Terraform", "VPC", "EC2"],
-    link: "https://github.com/fatemehfeizipour/Projects/tree/main/terraform-portfolio-project/terraform-VPC",
-  },
-  {
-    title: "Bastion Host Access Architecture",
-    description:
-      "Designed a secure administrative access pattern across two Availability Zones - SSH to a bastion host in the public subnet, then SSL to private EC2 instances - keeping private resources fully unreachable from the internet, with full public/private route table mapping.",
-    stack: ["VPC", "Bastion Host", "Route Tables", "NAT Gateway"],
-    link: "https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-cloudengineering-activity-7480596205891186688-wN3r?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU"
-  },
-  {
-    title: "Static Website on S3 + CloudFront with Terraform",
-    description:
-      "Built and deployed a static website using Amazon S3 for storage and Amazon CloudFront for global content delivery, exploring multilayer S3 security.",
-    stack: ["Terraform", "CloudFront", "S3", "Multilayer S3 Security"],
-    link: "https://github.com/fatemehfeizipour/Projects/blob/main/terraform-portfolio-project/terraform-nextjs-blog/README.md",
-  },
-  {
-    title: "Infrastructure as Code with CloudFormation",
-    description:
-      "Designed and deployed AWS infrastructure using CloudFormation, including VPCs, subnets, EC2, IAM, Auto Scaling Groups, Load Balancers, and NAT Gateways.",
-    stack: ["CloudFormation", "VPC", "EC2"],
-    link: "https://github.com/fatemehfeizipour/Projects/tree/main/cloudformation-projects",
-  },
-  {
-    title: "A Video Sharing Platform - System Design",
-    description:
-      "Designed the architecture for a video-sharing platform covering the full upload-to-playback pipeline: S3 and Lambda for transcoding into multiple resolutions, Amazon Rekognition for content moderation, DynamoDB for metadata, API Gateway for auth and rate limiting, and CloudFront for low-latency delivery.",
-    stack: ["S3", "Lambda", "Rekognition", "DynamoDB", "API Gateway", "CloudFront"],
-    link: "https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-systemdesign-activity-7477097594838523904-M5F4?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU"
-  },
-  {
-    title: "Traditional vs. Serverless Architecture",
-    description:
-      "Compared three architectural approaches for a scalable web application - horizontal scaling, vertical scaling, and a fully serverless design with API Gateway, Lambda, and EventBridge - weighing trade-offs in scalability, resilience, latency, and cost.",
-    stack: ["System Design", "Lambda", "API Gateway", "DynamoDB"],
-    link: "https://www.linkedin.com/posts/fatemeh-feyzipour_aws-cloudcomputing-systemdesign-activity-7477097594838523904-M5F4?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOdEekBNejZcME7HcR483AQlDee7t4jnBU"
-  
-  },
-  {
-    title: "Asynchronous Messaging with SQS + SNS",
-    description:
-      "Implemented a decoupled order-processing pattern: producer publishes messages to an SQS queue, a consumer processes and deletes them via long polling, with SNS fan-out for downstream notifications. Demonstrates async processing and loose coupling between services.",
-    stack: ["SQS", "SNS", "Python", "boto3"],
-    link: "https://github.com/fatemehfeizipour/Projects/tree/main/aws-sqs-project",
+      "Deployed and centrally managed a fleet of 5 Linux EC2 servers via AWS Systems Manager - no direct SSH. IAM role-based access and tag-based targeting control which instances a command reaches, and an idempotent Bash provisioning script handles OS detection, user/permission setup, and service configuration consistently across the fleet.",
+    stack: ["AWS Systems Manager", "EC2", "IAM", "Bash", "Linux"],
+    link: "https://github.com/fatemehfeizipour/<repo-name>",
   },
 ]
 
